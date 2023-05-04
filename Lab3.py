@@ -6,6 +6,9 @@ SORT_DESCENDING = 1
 
 def bubble_sort(arr, sorting_order):
 
+    for s in arr:
+        if type(s) is not int:
+         return 2
     # Copy input list to results list
     arr_result = arr.copy()
 
@@ -35,6 +38,13 @@ def bubble_sort(arr, sorting_order):
                     arr_result = []
     else:
         arr_result = -1
+
+    if n > 10:
+        arr_result = 1
+
+    if n == 0:
+        arr_result = 0
+
 
     return arr_result
 
